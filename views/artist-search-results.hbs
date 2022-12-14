@@ -1,0 +1,19 @@
+<h2>Search results for "{{search}}"</h2>
+
+<div id="cards">
+
+    {{#each artists}}
+        <div class="card">
+            {{#each this.images}}
+                {{#if @first}}
+                    <div class="card-image" style="background-image:url({{this.url}})"></div>
+                {{/if}}
+            {{/each}}
+            <div class="card-infos">
+                <h2>{{this.name}}</h2>
+                <a href="/albums/{{this.id}}">View albums</a>
+            </div>
+        </div>
+    {{/each}}
+
+</div>
