@@ -4,11 +4,9 @@
 
     {{#each artists}}
         <div class="card">
-            {{#each this.images}}
-                {{#if @first}}
-                    <div class="card-image" style="background-image:url({{this.url}})"></div>
-                {{/if}}
-            {{/each}}
+            {{#if this.images}}
+                <div class="card-image" style="background-image:url({{this.images.0.url}})"></div>
+            {{/if}}
             <div class="card-infos">
                 <h2>{{this.name}}</h2>
                 <a href="/albums/{{this.id}}">View albums</a>
